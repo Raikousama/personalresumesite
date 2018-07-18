@@ -1,0 +1,180 @@
+.wrapper, .wrabout{
+/* Mobile CSS also contains css for
+ content sidebar and footer 
+ Css for navbar different*/
+
+    display: grid;
+    color: black;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px; 
+    background-image: url("trianglify.png");
+    background-color: whitesmoke;
+    grid-template-areas: 
+    "nav"
+    "sidebar"
+    "content"
+    "footer";
+} 
+
+    body{
+          
+        background-image: url("trianglify.png");
+        background-color: whitesmoke;
+        margin: 3%
+    }
+    .sidebar img {
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        max-width: 75%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 75%;
+        padding: 5px;
+        
+    }
+    
+.sidebar{
+ 
+    border: 1px solid gainsboro;
+    border-left: 5px solid rgb(10, 10, 10);
+    background-image: url("trianglify.png");
+    background-color: rgb(192, 192, 192);
+    grid-area: sidebar;
+
+   
+    }
+
+  
+
+.footer{
+    border: 1px solid gainsboro;
+    padding: 10px;
+    text-align : center;
+    color: #f3f3f3;
+    
+    background-color: black;
+    grid-area: footer;
+}
+
+.content{
+         border: 2px solid gainsboro;
+        padding: 10px;
+        border-left: 5px solid black;
+        background-image: url("trianglify.png");
+        background-color: rgb(192, 192, 192);
+        grid-area: content;
+       
+}
+
+
+
+.content h2,h3{
+    border-bottom:2px solid gainsboro;
+}
+
+
+
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+}
+
+li a:hover {
+    background-color: #111;
+    color: aqua;
+}
+
+.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#111;
+}
+
+.navbar a:not(:first-child){
+    display: none;
+}
+.navbar .a.icon{
+    float: right;
+    display:block;
+}
+.navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+
+
+   
+
+    @media (min-width: 500px) {
+      
+        .wrapper {
+          grid-template-columns: 1fr 3fr;
+          background-color: whitesmoke;
+          grid-template-areas: 
+             "nav    nav"
+            "sidebar content"           
+            "footer footer";
+            grid-column-gap: 5%;
+            grid-row-gap: 50px;
+            background-image: url("trianglify.png");
+           
+           
+        }
+
+        .sidebar img {
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 75%;
+            max-width: 100%;
+             height: auto;
+            border: 1px solid #ddd;
+            border-radius: 75%;
+            padding: 5px;
+            
+        }
+
+        .header{
+   
+            border: 2px solid;
+            background-color: #f3f3f3;
+             grid-area: nav;
+             grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+             
+        }
+        .navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color:#111;
+            }
+        .navbar .icon{
+            display: none;
+        }
+            
+            
+     
+
+
+}
+   
+   
